@@ -11,8 +11,6 @@ def addSubStringAfterIndex(originalString, index, substring):
     return newString
 
 
-i = 1
-
 originalString = input("Write any string: ")
 if(originalString == ""):  # if user press enter without writing anything
     originalString = "My name is your name"
@@ -20,10 +18,11 @@ if(originalString == ""):  # if user press enter without writing anything
 number = int(input("How many messages do you want to send: "))
 choice = input("Do you want to append index in your string (yes or no) : ")
 print("\033[1;31mMessage will be printed at your current cursor position. So, Place your cursor wherever you want to write messages...")
-print("\033[1;32mYou have 5 seconds to change the cursor position......")
+print("\033[1;32mYou have 5 seconds to change the cursor position......\033[0m")
 
 string = originalString  # initially string to be printed will originalString
 
+i = 1
 while i <= number:
     if i == 1:
         sleep(5)

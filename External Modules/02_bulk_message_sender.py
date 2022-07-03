@@ -1,5 +1,5 @@
 """
-    Message bomber script. Use to write large number of messages and send them by auto pressing enter. 
+    Bulk sender script. Use to write large number of messages and send them by auto pressing enter. 
 """
 from pyautogui import write, press
 from time import sleep
@@ -10,6 +10,9 @@ def addSubStringAfterIndex(originalString, index, substring):
     newString = originalString[:index]+" "+substring+originalString[index+1:]
     return newString
 
+
+print("\033[2J\033[H\033[1;34m============BULK MESSAGE SENDER============")
+print("\033[1;36m             Scripted By: Suraj Kumar Giri\033[0m\n")
 
 originalString = input("Write any string: ")
 if(originalString == ""):  # if user press enter without writing anything

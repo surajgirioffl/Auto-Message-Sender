@@ -25,10 +25,10 @@ print("\033[1;32mYou have 5 seconds to change the cursor position......\033[0m")
 
 string = originalString  # initially string to be printed will originalString
 
+sleep(5)
+
 i = 1
 while i <= number:
-    if i == 1:
-        sleep(5)
     if(choice == "yes" or choice == "Yes"):
         string = addSubStringAfterIndex(
             originalString, len(originalString), str(i))

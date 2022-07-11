@@ -18,21 +18,21 @@ system("cls")
 print("\033[2J\033[H\033[1;34m============BULK MESSAGE SENDER============")
 print("\033[1;36m             Scripted By: Suraj Kumar Giri\033[0m\n")
 
-originalString = input("Write any string: ")
+originalString = input("\033[1;33m01. Write your message: ")
 if(originalString == ""):  # if user press enter without writing anything
     originalString = "My name is your name"
     print("By default: \033[1;34m'%s'\033[0m will printed as messages.." % originalString)
 
 while(True):
     try:
-        number = int(input("How many messages do you want to send: "))
+        number = int(input("\033[1;35m02. How many messages do you want to send: "))
         break
     except ValueError:
         print("\033[1;31mInvalid Input...")
         print("\033[1;32mWrite again..\033[0m")
 
 try:
-    interval = float(input("Write time interval (in seconds) to send messages: "))
+    interval = float(input("\033[1;36mWrite time interval (in seconds) to send messages: "))
 except ValueError:
     print("Input must be in integer or floating point.")
 finally:

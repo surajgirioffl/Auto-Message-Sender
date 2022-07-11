@@ -21,10 +21,25 @@ print("\033[1;36m             Scripted By: Suraj Kumar Giri\033[0m\n")
 originalString = input("Write any string: ")
 if(originalString == ""):  # if user press enter without writing anything
     originalString = "My name is your name"
+    print("By default: \033[1;34m'%s'\033[0m will printed as messages.." % originalString)
 
-number = int(input("How many messages do you want to send: "))
-interval = float(input("Write time interval (in seconds) to send messages: "))
-choice = input("Do you want to append index in your string (yes or no) : ")
+while(True):
+    try:
+        number = int(input("How many messages do you want to send: "))
+        break
+    except ValueError:
+        print("\033[1;31mInvalid Input...")
+        print("\033[1;32mWrite again..\033[0m")
+
+try:
+    interval = float(input("Write time interval (in seconds) to send messages: "))
+except ValueError:
+    print("Input must be in integer or floating point.")
+finally:
+    interval = 0
+    print("\033[34mBy default time interval selected to 0")
+
+choice = input("\033[32mDo you want to append index in your string (yes or no) : ")
 print("\033[1;31mMessage will be printed at your current cursor position. So, Place your cursor wherever you want to write messages...")
 print("\033[1;32mYou have 10 seconds to change the cursor position......\033[0m")
 

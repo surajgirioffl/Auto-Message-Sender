@@ -35,9 +35,11 @@ try:
     interval = float(input("\033[1;36m03. Write time interval (in seconds) to send messages: "))
 except ValueError:
     print("Input must be in integer or floating point.")
-finally:
     interval = 0
     print("\033[34mBy default time interval selected to 0")
+else:#in case of no exception
+    print("\033[1;32mTime interval = %d selected.."%interval)
+    
 
 choice = input("\033[32m04. Do you want to append index in your string (yes or no) : ")
 print("\033[1;31mMessage will be printed at your current cursor position. So, Place your cursor wherever you want to write messages...")

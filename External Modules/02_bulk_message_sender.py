@@ -32,14 +32,14 @@ while(True):
         print("\033[1;32mWrite again..\033[0m")
 
 try:
-    interval = float(input("\033[1;36mWrite time interval (in seconds) to send messages: "))
+    interval = float(input("\033[1;36m03. Write time interval (in seconds) to send messages: "))
 except ValueError:
     print("Input must be in integer or floating point.")
 finally:
     interval = 0
     print("\033[34mBy default time interval selected to 0")
 
-choice = input("\033[32mDo you want to append index in your string (yes or no) : ")
+choice = input("\033[32m04. Do you want to append index in your string (yes or no) : ")
 print("\033[1;31mMessage will be printed at your current cursor position. So, Place your cursor wherever you want to write messages...")
 print("\033[1;32mYou have 10 seconds to change the cursor position......\033[0m")
 

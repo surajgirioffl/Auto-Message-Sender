@@ -3,6 +3,7 @@
 """
 from pyautogui import write, press
 from time import sleep
+from os import system
 
 
 def addSubStringAfterIndex(originalString, index, substring):
@@ -10,6 +11,9 @@ def addSubStringAfterIndex(originalString, index, substring):
     newString = originalString[:index]+" "+substring+originalString[index+1:]
     return newString
 
+
+# to clear the screen and it will invoke the support of ANSI escape sequence of color below.
+system("cls")
 
 print("\033[2J\033[H\033[1;34m============BULK MESSAGE SENDER============")
 print("\033[1;36m             Scripted By: Suraj Kumar Giri\033[0m\n")
@@ -19,13 +23,14 @@ if(originalString == ""):  # if user press enter without writing anything
     originalString = "My name is your name"
 
 number = int(input("How many messages do you want to send: "))
+interval = float(input("Write time interval (in seconds) to send messages: "))
 choice = input("Do you want to append index in your string (yes or no) : ")
 print("\033[1;31mMessage will be printed at your current cursor position. So, Place your cursor wherever you want to write messages...")
-print("\033[1;32mYou have 5 seconds to change the cursor position......\033[0m")
+print("\033[1;32mYou have 10 seconds to change the cursor position......\033[0m")
 
 string = originalString  # initially string to be printed will originalString
 
-sleep(5)
+sleep(10)
 
 i = 1
 while i <= number:
@@ -35,3 +40,4 @@ while i <= number:
     write(string)
     press("enter")
     i += 1
+    sleep(interval)

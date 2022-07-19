@@ -6,6 +6,18 @@ from time import sleep
 from os import system
 
 
+def logo():
+    print("""\033[38;5;201m
+           ______                                             _                    _                   
+|  ___ \                                           | |                  | |                  
+| | _ | |  ____   ___   ___   ____   ____   ____   | | _    ___   ____  | | _    ____   ____ 
+| || || | / _  ) /___) /___) / _  | / _  | / _  )  | || \  / _ \ |    \ | || \  / _  ) / ___)
+| || || |( (/ / |___ ||___ |( ( | |( ( | |( (/ /   | |_) )| |_| || | | || |_) )( (/ / | |    
+|_||_||_| \____)(___/ (___/  \_||_| \_|| | \____)  |____/  \___/ |_|_|_||____/  \____)|_|    
+                                   (_____|                                                   
+          """)
+
+
 def addSubStringAfterIndex(originalString, index, substring):
     """This function will add passed substring after given index of the string"""
     newString = originalString[:index] + " " + \
@@ -16,8 +28,9 @@ def addSubStringAfterIndex(originalString, index, substring):
 # to clear the screen and it will invoke the support of ANSI escape sequence of color below.
 system("cls")
 
-print("\033[2J\033[H\033[1;34m============BULK MESSAGE SENDER============")
-print("\033[1;36m             Scripted By: Suraj Kumar Giri\033[0m\n")
+# print("\033[2J\033[H\033[1;34m============BULK MESSAGE Bomber============")
+logo()  # for display the logo
+print("\033[1;36m\t\t\t\t\t\t\t\tScripted By: Suraj Kumar Giri\033[0m\n")
 
 originalString = input("\033[1;33m01. Write your message: ")
 if originalString == "":  # if user press enter without writing anything

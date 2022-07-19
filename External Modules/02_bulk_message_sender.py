@@ -69,7 +69,9 @@ print("\033[1;32mYou have 10 seconds to change the cursor position......\033[0m"
 
 string = originalString  # initially string to be printed will originalString
 
-sleep(10)
+for i in range(10):
+    print("\033[1;31m\b\b%02d" % (i + 1), end='')
+    sleep(1)
 
 i = 1
 while i <= number:

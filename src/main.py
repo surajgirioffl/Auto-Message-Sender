@@ -1,5 +1,5 @@
 """
-    Bulk sender script. Use to write large number of messages and send them by auto pressing enter. 
+    Bulk sender script. Use to write large number of messages and send them by auto pressing enter.
 """
 from os import system
 from time import sleep
@@ -43,7 +43,7 @@ def main():
     if originalString == "":  # if user press enter without writing anything
         originalString = "My name is your name"
         print(
-            "By default: \033[1;34m'%s'\033[0m will printed as messages.." % originalString)
+            f"By default: \033[1;34m'{originalString}'\033[0m will printed as messages..")
 
     while True:
         try:
@@ -62,7 +62,7 @@ def main():
         interval = 0
         print("\033[34mBy default time interval selected to 0")
     else:  # in case of no exception
-        print("\033[1;32mTime interval = %d selected.." % interval)
+        print(f"\033[1;32mTime interval = {interval} selected..")
 
     choice = input(
         "\033[32m04. Do you want to append index in your string (yes or no) : ")
@@ -77,7 +77,7 @@ def main():
 
     i = 1
     while i <= number:
-        if choice == "yes" or choice == "Yes":
+        if choice in ('yes', 'Yes', 'YES'):
             string = addSubStringAfterIndex(
                 originalString, len(originalString), str(i))
         write(string)

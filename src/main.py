@@ -1,12 +1,15 @@
 """
     Bulk sender script. Use to write large number of messages and send them by auto pressing enter. 
 """
-from pyautogui import write, press
-from time import sleep
 from os import system
+from time import sleep
+from pyautogui import write, press
 
 
 def logo():
+    """
+    This function will print the logo of the script.
+    """
     print("""\033[38;5;201m
  ______                                             _                    _                   
 |  ___ \\                                           | |                  | |                  
@@ -26,6 +29,9 @@ def addSubStringAfterIndex(originalString, index, substring):
 
 
 def main():
+    """
+        Main function to execute the script.
+    """
     # to clear the screen and it will invoke the support of ANSI escape sequence of color below.
     system("cls")
 
